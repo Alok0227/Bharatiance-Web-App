@@ -40,11 +40,11 @@ export const Sidebar = ({ auth: { user }, logout }) => {
           </li>
         </Link>
 
-        <Link  to="/faculty/archives">
+        {/* <Link  to="/faculty/archives">
           <li className="sidenav__list-item" style={{color:"black"}}>
             <b>Archived courses</b>{" "}
           </li>
-        </Link>
+        </Link> */}
 
         <Link to="/" >
           <li className="sidenav__list-item" style={{color:"black"}} onClick={logout}>

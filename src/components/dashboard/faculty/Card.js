@@ -55,7 +55,7 @@ export const Card = ({
                 Batch: {dept} - {year}
               </h4>
             </div>
-            <button
+            {/* <button
               type="submit"
               style={{ alignContent: "right" }}
               onClick={(e) => {
@@ -65,7 +65,7 @@ export const Card = ({
             >
               {" "}
               Archive
-            </button>
+            </button> */}
           </div>
         )}
       </div>

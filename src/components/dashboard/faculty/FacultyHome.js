@@ -30,7 +30,7 @@ const FacultyHome = ({
     <Spinner />
   ) : (
     <div className="grid-container">
-      <header className="header" style={{"background":"black", "padding":"10px"}}>
+      <header className="header" style={{ "background": "black", "padding": "10px" }}>
         <div className="header__logo">Attendance DashBoard</div>
         <div className="responsive-sidebar">
           <div className="inner-responsive-sidebar">
@@ -47,9 +47,6 @@ const FacultyHome = ({
               <span className="">Class Rooms </span>
             </Link>
 
-            <Link style={{ color: "white", fontWeight: "500px" }} to="/faculty/archives" >
-              <span>Archived courses</span>
-            </Link>
 
             <Link to="/" style={{ color: "white", fontWeight: "500px" }}>
               <span onClick={logout}>Logout</span>
@@ -62,22 +59,32 @@ const FacultyHome = ({
 
       <main className="main">
         <div className="container_head">
-          <div className="main-header" style={{backgroundColor:"white"}}>
+          <div className="main-header" style={{ backgroundColor: "white" }}>
             <div className="main-header__heading">
-              <h1 style={{ fontWeight: "750px" }}>Prof. {user.name}</h1>
-              <h4 style={{ fontSize: "28" }}>{user.dept} department faculty</h4>
+              <h1 style={{ fontWeight: "200px" }}>Prof. {user.name}</h1>
+              <h4 style={{ fontSize: "18px" }}>{user.dept} department faculty</h4>
             </div>
             <div className="d-flex justify-content-end">
-              <img src={process.env.PUBLIC_URL + `/images/logo.png`} />
+              {(user.name === "Sanjay Kadam") ?
+                (<img src={process.env.PUBLIC_URL + `/images/sk.jpg`} />)
+                : (user.name === "Hitendra Chavan") ?
+                  (<img src={process.env.PUBLIC_URL + `/images/hn.jpg`} />)
+                  :
+                  (<img src={process.env.PUBLIC_URL + `/images/sp.jpg`} />)
+              }
             </div>
           </div>
         </div>
 
-        <h1 style={{ paddingLeft: "10px", fontFamily: "courier new" }}>Profile </h1>
-        
+        <h1 style={{ paddingLeft: "30px", fontFamily: "courier new" }}>Lectures </h1>
+        <div class="card">
+          <div class="card-body">
+            Nothing to Show here.
+          </div>
+        </div>
         <br />
       </main>
-        <Footer/>
+      <Footer />
     </div>
   );
 };
